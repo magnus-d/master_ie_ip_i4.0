@@ -12,8 +12,10 @@ Die Grenzwerte des CO2-Gehaltes stammen aus dem Bundesgesundheitsblatt des Bunde
 - 7 Color Flash
 - Two Color LED
 
-Hier für wird folgender Aufbau verwendet:
+Diese Komponenten sind folgendermaßen verbaut:
 ![Projekt IoT_Steckplatine](https://user-images.githubusercontent.com/85877515/121889313-60fcf880-cd19-11eb-9771-1301b1e4cbad.png)
+
+Die erfassten Daten werden vom Mikrocontroller an AWS gesendet und anschließend von AWS ausgewertet. Bei einer Grenzwertüberschreitung oder -unterschreitung sendet AWS automatisch durch Simple Notification Services eine Mail an die voreingestellten Empfänger. Mithilfe von Boto3 sind tiefergehende Analysen der aufgenommenen Daten möglich. 
 
 Als Ergebnis lässt sich zusammenfassen, dass das Projektziel vollständig erfüllt werden konnten. Allerdings gibt es eine Punkte, bei denen weiterhin Optimierungspotenzial besteht:
 - Der Programmablaufplan ist teilweise umständlicher gestaltet, als nötig (Zusammenfassung von Schleifen)
