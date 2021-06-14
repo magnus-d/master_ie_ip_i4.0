@@ -17,7 +17,7 @@ Diese Komponenten sind folgendermaßen verbaut:
 
 Die erfassten Daten werden vom Mikrocontroller an AWS gesendet und anschließend von AWS ausgewertet. Bei einer Grenzwertüberschreitung oder -unterschreitung sendet AWS automatisch durch Simple Notification Services eine Mail an die voreingestellten Empfänger. Mithilfe von Boto3 sind tiefergehende Analysen der aufgenommenen Daten möglich. 
 
-Als Ergebnis lässt sich zusammenfassen, dass das Projektziel vollständig erfüllt werden konnten. Allerdings gibt es eine Punkte, bei denen weiterhin Optimierungspotenzial besteht:
+Als Ergebnis lässt sich zusammenfassen, dass das Projektziel vollständig erfüllt werden konnten. Allerdings gibt es einige Punkte, bei denen weiterhin Optimierungspotenzial besteht:
 - Der Programmablaufplan ist teilweise umständlicher gestaltet, als nötig (Zusammenfassung von Schleifen)
 - Es wird erst eine Notification versendet, wenn der Grenzwert schon überschritten wurde --> engere Eingriffsgrenze bei erkennbaren Trends wären eine Möglichkeit
 - Mithilfe eines LCD-Displays würde ein deutlich verbessertes Feedback ermöglicht
