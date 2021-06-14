@@ -22,5 +22,9 @@ Als Ergebnis lässt sich zusammenfassen, dass das Projektziel vollständig erfü
 - Es wird erst eine Notification versendet, wenn der Grenzwert schon überschritten wurde --> engere Eingriffsgrenze bei erkennbaren Trends wären eine Möglichkeit
 - Mithilfe eines LCD-Displays würde ein deutlich verbessertes Feedback ermöglicht
 - Im Laufe der Datenerhebungsphase traten einzelne, zeitlich willkürliche Fehler auf, die auch nach Rücksprache mit den Professoren und einer tiefergehende Internetrecherche nicht ergründet werden konnten (Ist der verwendete Mikrocontroller für die Anwendung der Richtige?)
+- Es fehlt ein passendes Case, um das MVP vor Beschädigungen schützen zu können (3D-Druck als Anwendungsmöglichkeit?)
+
+Aufgebaut sieht das ganze System dann so aus:
+![image](https://user-images.githubusercontent.com/85877515/121894820-dec40280-cd1f-11eb-956c-0e97e3d71224.png)
 
 Dieses Github Repository ist als Anhang der Projektdokumentation zu bewerten. Sämtliche Inhalte des Repositories sind als Inhalte des Anhangs anzusehen.
