@@ -6,4 +6,4 @@ Die Auswertung erfolgt durch ein Jupyter Notebook und das Boto3-Paket für Pytho
 - Daraufhin wird in einem Liniendiagramm der Verlauf für CO² [ppm], Luftfeuchtigkeit [%] und Temperatur [°C] visualisiert. 
 - Neben der reinen Visualisierung wird im nächsten Schritt dem User noch die Häufigkeitsverteilung der jeweiligen Messwerte für den ausgewählten Zeitraum zur Verfügung gestellt. Diese Daten werden mittels eines Balkendiagramms und einer Gauß-Verteilungskurve dargestellt. 
 
-In der beiligenden PDF Datei () ist eine beispielhafte Auswertung für den 27.05.2021 abgebildet
+In der beiligenden PDF Datei (https://github.com/magnus-d/master_ie_ip_i4.0/blob/main/Analysis/JupyterLab.pdf) ist eine beispielhafte Auswertung für den 27.05.2021 abgebildet
