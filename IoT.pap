@@ -1,0 +1,988 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="815F848A4F3A7713">
+  <PROJECT FORMAT="1.00" NAME="IoT" AUTHOR="Magnus" CREATED="2021.06.10 11:29:39" MODIFIED="2021.06.10 12:36:30">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="Schlechte Luft, schlechtes Arbeiten" CREATED="2021.06.10 11:29:44" MODIFIED="2021.06.10 12:36:30">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="25">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Schlechte Luft, schlechtes Arbeiten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Import der Bibliotheken & Unterprogramme]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[wifi.py
+wifi_connect()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[wifi.py
+synchronize_rtc()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[wifi.py
+connect_mqtt()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Intervalle definieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="14" ASSOCIATE="16">
+                <TEXT><![CDATA[Solange Strom fließt...]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[Keypad.py
+Keypad_Button()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[Wurde der Knopf A gedrückt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="31">
+                <TEXT><![CDATA[measurement.py
+measurement_start()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="33" ASSOCIATE="35">
+                <TEXT><![CDATA[Solange nicht der Knopf D gedrückt wurde...]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="37">
+                <TEXT><![CDATA[measurement.py
+carbon_dioxide_measurement()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="39">
+                <TEXT><![CDATA[measurement.py
+temp_hum_measurement()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="41">
+                <TEXT><![CDATA[wifi.py
+aws_connection()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="43">
+                <TEXT><![CDATA[Stoppuhr starten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="16">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="49">
+                <TEXT><![CDATA[Ist das Fenster offen oder geschlossen?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="17">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="45" ASSOCIATE="47">
+                <TEXT><![CDATA[Solange die gestoppte Zeit kleiner als das initalisierte Messintervall für das geöffnete Fenster ist...]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="18">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="58">
+                <TEXT><![CDATA[Keypad.py
+user_input()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="19">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="62">
+                <TEXT><![CDATA[Gestoppte Zeit erfassen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="20">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="47" ASSOCIATE="45">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="21">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="69">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="22">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="35" ASSOCIATE="33">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="23">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="16" ASSOCIATE="14">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="24">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="25">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="27">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="16">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="51">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="17">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="55" ASSOCIATE="56">
+                <TEXT><![CDATA[Solange die gestoppte Zeit kleiner als das initalisierte Messintervall für das geschlossene Fenster ist...]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="18">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="60">
+                <TEXT><![CDATA[Keypad.py
+user_input()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="19">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="64">
+                <TEXT><![CDATA[Gestoppte Zeit erfassen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="20">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="56" ASSOCIATE="55">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="21">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="66">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="93" FROM="8" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="92" FROM="6" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="94" FROM="10" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="17" FROM="16" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="14" TO="20" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="19" FROM="18" TO="31" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="21" FROM="20" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="18" TO="27" TEXT="nein - 0,5 Sekunden Sleep" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="25" TO="20" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="27" TO="25" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="32" FROM="31" TO="33" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="36" FROM="35" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="34" FROM="33" TO="37" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="38" FROM="37" TO="39" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="39" TO="41" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="42" FROM="41" TO="43" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="44" FROM="43" TO="49" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="70" FROM="69" TO="35" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="46" FROM="45" TO="58" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="50" FROM="49" TO="45" TEXT="offen (Messintervall = 2,5 min)" />
+          <CONNECTION FORMAT="1.00" ID="52" FROM="49" TO="51" TEXT="geschlossen (Messintervall = 5 min)" />
+          <CONNECTION FORMAT="1.00" ID="54" FROM="51" TO="55" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="57" FROM="55" TO="60" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="59" FROM="58" TO="62" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="61" FROM="60" TO="64" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="63" FROM="62" TO="47" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="65" FROM="64" TO="56" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="67" FROM="56" TO="66" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="48" FROM="47" TO="69" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="71" FROM="66" TO="69" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="1" NAME="Projekt IoT" CREATED="2021.06.10 11:31:45" MODIFIED="2021.06.10 11:31:45">
+        <LAYOUT FORMAT="1.00" COLUMNS="1" ROWS="3">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Projekt IoT]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="2" NAME="measurement.py" CREATED="2021.06.10 11:32:05" MODIFIED="2021.06.10 11:32:05">
+        <LAYOUT FORMAT="1.00" COLUMNS="1" ROWS="3">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[measurement.py]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="3" NAME="LED.py" CREATED="2021.06.10 11:32:17" MODIFIED="2021.06.10 11:32:17">
+        <LAYOUT FORMAT="1.00" COLUMNS="1" ROWS="3">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[LED.py]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="4" NAME="Keypad.py" CREATED="2021.06.10 11:33:11" MODIFIED="2021.06.10 11:33:11">
+        <LAYOUT FORMAT="1.00" COLUMNS="1" ROWS="3">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Keypad.py]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="5" NAME="Schlechte Luft, schlechtes Arbeiten [2]" CREATED="2021.06.10 11:29:44" MODIFIED="2021.06.10 11:29:44">
+        <LAYOUT FORMAT="1.00" COLUMNS="9" ROWS="62">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Schlechte Luft, schlechtes Arbeiten [2]]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Import der Bibliotheken & Unterprogramme]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="95">
+                <TEXT><![CDATA[WLAN-Verbindung herstellen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="96">
+                <TEXT><![CDATA[Real-Time-Clock mit Server synchronisieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="97">
+                <TEXT><![CDATA[Zertifikate für die AWS-Verbindung abrufen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="98">
+                <TEXT><![CDATA[Verbindung zum MQTT-Client herstellen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Intervalle definieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="14" ASSOCIATE="16">
+                <TEXT><![CDATA[Solange Strom fließt...]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="100">
+                <TEXT><![CDATA[Gedrückten Keypad-Knopf abrufen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[Wurde der Knopf A gedrückt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="110">
+                <TEXT><![CDATA[CO2-Sensor initialisieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="102">
+                <TEXT><![CDATA[Stoppuhr für die Aufheizzeit des CO2-Sensors initialisieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="104" ASSOCIATE="106">
+                <TEXT><![CDATA[Solange der Sensor noch nicht aufgeheizt ist...]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="101">
+                <TEXT><![CDATA[Messungsstart signalisieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="112">
+                <TEXT><![CDATA[CO2-Messung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="16">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="120">
+                <TEXT><![CDATA[Initialisierung des Temp&Hum Sensors]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="17">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="114">
+                <TEXT><![CDATA[Temperatur- & Luftfeuchtigkeitsmessung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="18">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="116">
+                <TEXT><![CDATA[Aktuelle Aufheizzeit erfassen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="19">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="106" ASSOCIATE="104">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="20">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="33" ASSOCIATE="35">
+                <TEXT><![CDATA[Solange nicht der Knopf D gedrückt wurde...]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="21">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="118">
+                <TEXT><![CDATA[Initialisierung des CO2-Sensors]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="22">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="124">
+                <TEXT><![CDATA[CO2-Messung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="23">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="128">
+                <TEXT><![CDATA[CO2-Gehalt < 800 ppm?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="25">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="126">
+                <TEXT><![CDATA[grüne LED leuchtet]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="26">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="39">
+                <TEXT><![CDATA[measurement.py
+temp_hum_measurement()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="27">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="122">
+                <TEXT><![CDATA[Initialisierung des Temp&Hum Sensors]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="28">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="147">
+                <TEXT><![CDATA[Temperatur- & Luftfeuchtigkeitsmessung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="29">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="149">
+                <TEXT><![CDATA[Temperatur < 19 °C?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="32">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="153">
+                <TEXT><![CDATA[Luftfeuchtigkeit < 40 %?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="35">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="157">
+                <TEXT><![CDATA[Temperatur > 25?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="38">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="161">
+                <TEXT><![CDATA[Luftfeuchtigkeit > 60 %?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="41">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="260">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="42">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="289">
+                <TEXT><![CDATA[Daten für AWS in JSON verpacken]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="43">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="291">
+                <TEXT><![CDATA[JSON message in MQTT Topic publishen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="44">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="43">
+                <TEXT><![CDATA[Stoppuhr starten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="45">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="49">
+                <TEXT><![CDATA[Ist das Fenster offen oder geschlossen?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="46">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="45" ASSOCIATE="47">
+                <TEXT><![CDATA[Solange die gestoppte Zeit kleiner als das initalisierte Messintervall für das geöffnete Fenster ist...]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="47">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="293">
+                <TEXT><![CDATA[Gedrückten Keypad-Knopf abrufen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="48">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="297">
+                <TEXT><![CDATA[Knopf D gedrückt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="51">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="302">
+                <TEXT><![CDATA[Knopf C gedrückt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="53">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="311">
+                <TEXT><![CDATA[Knopf B gedrückt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="55">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="324">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="56">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="62">
+                <TEXT><![CDATA[Gestoppte Zeit erfassen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="57">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="47" ASSOCIATE="45">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="58">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="69">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="59">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="35" ASSOCIATE="33">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="60">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="16" ASSOCIATE="14">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="61">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="25">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="27">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="23">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="130">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="24">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="132">
+                <TEXT><![CDATA[CO2-Gehalt < 1400 ppm?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="25">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="137">
+                <TEXT><![CDATA[gelbe LED leuchtet]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="26">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="141">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="38">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="163">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="39">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="187">
+                <TEXT><![CDATA[rote LED blinkt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="40">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="188">
+                <TEXT><![CDATA[rote LED leuchtet]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="41">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="196">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="53">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="313">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="54">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="332">
+                <TEXT><![CDATA[7 Color Flash einschalten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="55">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="334">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="24">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="376">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="25">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="139">
+                <TEXT><![CDATA[rote LED leuchtet]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="26">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="379">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="35">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="159">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="36">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="180">
+                <TEXT><![CDATA[rote LED blinkt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="37">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="181">
+                <TEXT><![CDATA[rote LED leuchtet]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="39">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="190">
+                <TEXT><![CDATA[10s]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="41">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="263">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="51">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="308">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="52">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="327">
+                <TEXT><![CDATA[7 Color Flash ausschalten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="55">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="329">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="32">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="155">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="33">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="173">
+                <TEXT><![CDATA[blaue LED blinkt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="34">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="174">
+                <TEXT><![CDATA[blaue LED leuchtet]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="36">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="183">
+                <TEXT><![CDATA[10s]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="41">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="285">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="48">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="304">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="49">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="316">
+                <TEXT><![CDATA[alle LED´s ausschalten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="50">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="317">
+                <TEXT><![CDATA[grüne LED blinkt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="55">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="321">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="45">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="391">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="46">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="393" ASSOCIATE="394">
+                <TEXT><![CDATA[Solange die gestoppte Zeit kleiner als das initalisierte Messintervall für das geschlossene Fenster ist...]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="47">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="337">
+                <TEXT><![CDATA[Gedrückten Keypad-Knopf abrufen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="48">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="339">
+                <TEXT><![CDATA[Knopf D gedrückt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="50">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="318">
+                <TEXT><![CDATA[6 Sekunden]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="51">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="341">
+                <TEXT><![CDATA[Knopf C gedrückt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="53">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="343">
+                <TEXT><![CDATA[Knopf B gedrückt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="56">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="345">
+                <TEXT><![CDATA[Gestoppte Zeit erfassen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="57">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="394" ASSOCIATE="393">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="58">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="403">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="29">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="382">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="30">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="166">
+                <TEXT><![CDATA[blaue LED blinkt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="31">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="169">
+                <TEXT><![CDATA[blaue LED leuchtet]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="33">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="176">
+                <TEXT><![CDATA[10s]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="41">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="282">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="53">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="373">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="54">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="347">
+                <TEXT><![CDATA[7 Color Flash einschalten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="58">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="407">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="30">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="168">
+                <TEXT><![CDATA[10s]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="51">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="370">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="52">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="348">
+                <TEXT><![CDATA[7 Color Flash ausschalten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="58">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="411">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="48">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="51">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="49">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="350">
+                <TEXT><![CDATA[alle LED´s ausschalten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="50">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="349">
+                <TEXT><![CDATA[grüne LED blinkt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="58">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="66">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="8" ROW="50">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="351">
+                <TEXT><![CDATA[6 Sekunden]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="94" FROM="97" TO="98" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="92" FROM="95" TO="96" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="95" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="93" FROM="96" TO="97" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="17" FROM="16" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="21" FROM="100" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="108" FROM="101" TO="112" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="14" TO="100" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="18" TO="27" TEXT="nein - 0,5 Sekunden Sleep" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="25" TO="100" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="27" TO="25" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="109" FROM="102" TO="104" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="36" FROM="35" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="34" FROM="33" TO="118" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="39" TO="122" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="292" FROM="291" TO="43" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="44" FROM="43" TO="49" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="70" FROM="69" TO="35" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="46" FROM="45" TO="293" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="50" FROM="49" TO="45" TEXT="offen (Messintervall = 2,5 min)" />
+          <CONNECTION FORMAT="1.00" ID="52" FROM="49" TO="391" TEXT="geschlossen (Messintervall = 5 min)" />
+          <CONNECTION FORMAT="1.00" ID="312" FROM="311" TO="324" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="325" FROM="324" TO="62" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="319" FROM="304" TO="316" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="63" FROM="62" TO="47" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="54" FROM="51" TO="350" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="48" FROM="47" TO="69" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="404" FROM="403" TO="69" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="99" FROM="98" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="19" FROM="18" TO="110" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="105" FROM="104" TO="101" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="107" FROM="106" TO="33" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="111" FROM="110" TO="102" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="113" FROM="112" TO="120" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="115" FROM="114" TO="116" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="117" FROM="116" TO="106" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="119" FROM="118" TO="124" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="121" FROM="120" TO="114" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="123" FROM="122" TO="147" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="125" FROM="124" TO="128" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="127" FROM="126" TO="39" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="129" FROM="128" TO="126" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="131" FROM="128" TO="130" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="133" FROM="130" TO="132" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="135" FROM="132" TO="376" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="136" FROM="132" TO="137" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="138" FROM="137" TO="141" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="378" FROM="376" TO="139" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="146" FROM="141" TO="39" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="148" FROM="147" TO="149" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="150" FROM="149" TO="153" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="162" FROM="161" TO="260" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="154" FROM="153" TO="157" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="156" FROM="153" TO="155" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="158" FROM="157" TO="161" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="160" FROM="157" TO="159" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="261" FROM="260" TO="289" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="164" FROM="161" TO="163" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="284" FROM="282" TO="285" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="385" FROM="169" TO="282" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="384" FROM="382" TO="166" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="175" FROM="173" TO="174" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="177" FROM="155" TO="173" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="179" FROM="174" TO="285" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="184" FROM="180" TO="181" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="192" FROM="188" TO="196" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="186" FROM="159" TO="180" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="191" FROM="187" TO="188" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="264" FROM="263" TO="196" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="193" FROM="163" TO="187" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="290" FROM="289" TO="291" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="286" FROM="285" TO="263" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="387" FROM="166" TO="169" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="262" FROM="196" TO="260" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="256" FROM="149" TO="382" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="199" FROM="181" TO="263" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="294" FROM="293" TO="297" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="303" FROM="302" TO="311" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="298" FROM="297" TO="302" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="323" FROM="317" TO="321" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="310" FROM="302" TO="308" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="335" FROM="334" TO="324" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="301" FROM="297" TO="304" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="320" FROM="316" TO="317" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="315" FROM="311" TO="313" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="328" FROM="308" TO="327" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="326" FROM="321" TO="329" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="331" FROM="327" TO="329" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="333" FROM="313" TO="332" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="330" FROM="329" TO="334" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="336" FROM="332" TO="334" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="412" FROM="411" TO="407" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="353" FROM="339" TO="51" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="396" FROM="391" TO="393" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="388" FROM="350" TO="349" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="389" FROM="349" TO="66" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="409" FROM="347" TO="407" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="374" FROM="343" TO="373" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="369" FROM="341" TO="370" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="410" FROM="370" TO="348" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="406" FROM="373" TO="347" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="380" FROM="379" TO="141" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="381" FROM="139" TO="379" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="397" FROM="393" TO="337" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="398" FROM="337" TO="339" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="399" FROM="339" TO="341" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="400" FROM="341" TO="343" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="401" FROM="343" TO="345" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="402" FROM="345" TO="394" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="408" FROM="407" TO="403" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="405" FROM="394" TO="403" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="71" FROM="66" TO="411" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="413" FROM="348" TO="411" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>
