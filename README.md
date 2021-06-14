@@ -15,7 +15,7 @@ Die Grenzwerte des CO2-Gehaltes stammen aus dem Bundesgesundheitsblatt des Bunde
 Hier für wird folgender Aufbau verwendet:
 ![Projekt IoT_Steckplatine](https://user-images.githubusercontent.com/85877515/121889313-60fcf880-cd19-11eb-9771-1301b1e4cbad.png)
 
-Als Ergebnis kann man sagen, dass das Projektziel vollständig erfüllt werden konnten. Allerdings gibt es eine Punkte, bei denen weiterhin Optimierungspotenzial besteht:
+Als Ergebnis lässt sich zusammenfassen, dass das Projektziel vollständig erfüllt werden konnten. Allerdings gibt es eine Punkte, bei denen weiterhin Optimierungspotenzial besteht:
 - Der Programmablaufplan ist teilweise umständlicher gestaltet, als nötig (Zusammenfassung von Schleifen)
 - Es wird erst eine Notification versendet, wenn der Grenzwert schon überschritten wurde --> engere Eingriffsgrenze bei erkennbaren Trends wären eine Möglichkeit
 - Mithilfe eines LCD-Displays würde ein deutlich verbessertes Feedback ermöglicht
